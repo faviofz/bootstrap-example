@@ -1,0 +1,221 @@
+/* -------------------------------------------------------------------------- */
+/*                       SECTION ESCRITORIO (XL 1366px)                       */
+/* -------------------------------------------------------------------------- */
+
+* {
+	/* font-family: "Chewy", cursive; */
+	font-family: "Open Sans", sans-serif;
+}
+
+ul,
+ol {
+	list-style: none;
+	/* margin: auto; */
+}
+
+a:visited,
+a:link,
+a:focus,
+a:hover,
+a:active {
+	list-style: none;
+	text-decoration: none;
+}
+
+/* ------------------------------ ANCHOR HEADER ----------------------------- */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+header .logotipo {
+	width: 40%;
+}
+
+.redes ul li i {
+	width: 35px;
+	line-height: 35px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.redes ul li i.fa-facebook-f {
+	background: #2d88ff;
+}
+
+.redes ul li i.fa-instagram {
+	background: #69502f;
+}
+
+.redes ul li i.fa-twitter {
+	background: #1da1f2;
+}
+
+.redes ul li i.fa-snapchat-ghost {
+	background: #fffc00;
+}
+
+.redes ul li i.fa-youtube {
+	background: red;
+}
+
+.fa-search,
+.fa-bars {
+	color: white;
+}
+
+.fa-bars {
+	font-size: 35px;
+}
+
+.redesMovil {
+	position: fixed;
+	bottom: -10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+/* ------------------------------ ANCHOR BANNER ----------------------------- */
+
+.sliderf.slick-slider {
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+.bannerEstatico {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+/* ------------------------------- ANCHOR MENU ------------------------------ */
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	overflow-x: hidden;
+	font-weight: lighter;
+	display: none;
+	font-size: 34px;
+	line-height: 70px;
+}
+
+.btnClose {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	color: white;
+}
+
+.menu .nav {
+	margin-top: 15%;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   !SECTION                                 */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                    SECTION TABLET HORIZONTAL (LG 1024px)                   */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	header .logotipo {
+		width: 50%;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  !SECTION                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                     SECTION TABLET VERTICAL (MD 768px)                     */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 991px) and (min-width: 768px) {
+	header .logotipo {
+		width: 60%;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  !SECTION                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                     SECTION MOVIL HORIZONTAL (SM 576px)                    */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) and (min-width: 576px) {
+	header .logotipo {
+		width: 65%;
+	}
+
+	.slick-slide {
+		height: 69px;
+		width: 100%;
+	}
+
+	.slick-slide img {
+		height: 69px;
+		width: 100%;
+	}
+
+	.btnClose {
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		color: white;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  !SECTION                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                       SECTION MOVIL VERTICAL (320px)                       */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 575px) {
+	header .logotipo {
+		width: 100%;
+	}
+
+	.slick-slide {
+		height: 50px;
+		width: 100%;
+	}
+
+	.slick-slide img {
+		height: 50px;
+		width: 100%;
+	}
+
+	.btnClose {
+		position: absolute;
+		top: 5%;
+		left: 10%;
+		color: white;
+	}
+
+	.menu .nav {
+		margin-top: 25%;
+		font-size: 20px;
+		line-height: 40px;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  !SECTION                                  */
+/* -------------------------------------------------------------------------- */
