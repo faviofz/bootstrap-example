@@ -63,8 +63,8 @@ header .logotipo {
 	background: red;
 }
 
-.fa-search,
-.fa-bars {
+i.fa-search,
+i.fa-bars {
 	color: white;
 	cursor: pointer;
 }
