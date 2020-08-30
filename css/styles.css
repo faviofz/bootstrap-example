@@ -66,6 +66,7 @@ header .logotipo {
 .fa-search,
 .fa-bars {
 	color: white;
+	cursor: pointer;
 }
 
 .fa-bars {
@@ -108,7 +109,6 @@ header .logotipo {
 	display: none;
 	font-size: 34px;
 	line-height: 70px;
-	cursor: pointer;
 }
 
 .btnClose {
