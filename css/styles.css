@@ -108,6 +108,7 @@ header .logotipo {
 	display: none;
 	font-size: 34px;
 	line-height: 70px;
+	cursor: pointer;
 }
 
 .btnClose {
@@ -115,6 +116,7 @@ header .logotipo {
 	top: 10%;
 	right: 10%;
 	color: white;
+	cursor: pointer;
 }
 
 .menu .nav {
