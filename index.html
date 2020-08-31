@@ -16,6 +16,8 @@
 			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="css/jquery.jdSlider.css" />
+
 		<link rel="stylesheet" href="css/styles.css" />
 		<!-- JS, Popper.js, and jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -29,17 +31,13 @@
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 			crossorigin="anonymous"
 		></script>
+		<!-- JDslider -->
+		<script src="./js/jquery.jdSlider-latest.js"></script>
 		<!-- Font Awesome -->
 		<script
 			src="https://kit.fontawesome.com/44a31bd5ca.js"
 			crossorigin="anonymous"
 		></script>
-		<!-- slick slider-->
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-		/>
 		<link
 			rel="stylesheet"
 			type="text/css"
@@ -159,28 +157,31 @@
 		<!-- ----------------------------------------------------------------------- -->
 
 		<div class="bannerEstatico"></div>
-		<div class="sliderf">
-			<div>
-				<img
-					src="img/pexels-eberhard-grossgasteiger-443446 (1).jpg"
-					class="img-fluid"
-					alt=""
-				/>
+		<section class="jd-slider f-slider">
+			<div class="slide-inner">
+				<ul class="slide-area">
+					<li>
+						<img
+							src="./img/pexels-eberhard-grossgasteiger-443446 (1).jpg"
+							alt=""
+							class="img-fluid"
+						/>
+					</li>
+					<li>
+						<img
+							src="./img/pexels-fabian-wiktor-994605 (2).jpg"
+							alt=""
+							class="img-fluid"
+						/>
+					</li>
+					<li><img src="./img/pexels-pixabay-163872.jpg" alt="" class="img-fluid" /></li>
+					<li><img src="./img/pexels-splitshire-1562.jpg" alt="" class="img-fluid" /></li>
+					<li>
+						<img src="./img/pexels-stephan-seeber-1054289.jpg" alt="" class="img-fluid" />
+					</li>
+				</ul>
 			</div>
-			<div>
-				<img src="img/pexels-fabian-wiktor-994605 (2).jpg" class="img-fluid" alt="" />
-			</div>
-			<div>
-				<img src="img/pexels-pixabay-163872.jpg" class="img-fluid" alt="" />
-			</div>
-			<div>
-				<img src="img/pexels-splitshire-1562.jpg" class="img-fluid" alt="" />
-			</div>
-			<div>
-				<img src="img/pexels-stephan-seeber-1054289.jpg" class="img-fluid" alt="" />
-			</div>
-		</div>
-
+		</section>
 		<!-- ----------------------------------------------------------------------- -->
 		<!--                             BUSCADOR MOVIL                              -->
 		<!-- ----------------------------------------------------------------------- -->

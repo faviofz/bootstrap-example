@@ -63,10 +63,9 @@ header .logotipo {
 	background: red;
 }
 
-i.fa-search,
-i.fa-bars {
+div i.fa-search,
+div i.fa-bars {
 	color: white;
-	cursor: pointer;
 }
 
 .fa-bars {
