@@ -1,13 +1,15 @@
-$(".f-slider").jdSlider({
-	isSliding: false,
-	isAuto: true,
-	isLoop: true,
-	isCursor: false,
-	isDrag: false,
-	interval: 5000,
-	speed: 3000
+$(document).ready(function() {
+    $(".bxslider").bxSlider({
+        mode: "fade",
+        speed: 3000,
+        // hideControlOnEnd: true,
+        touchEnabled: false,
+        controls: false,
+        auto: true,
+        pager: false,
+        wrapperClass: "f-wrapper"
+    });
 });
-
 // var alturaBanner = $(".slick-list").height();
 // $(".bannerEstatico").css({ height: alturaBanner + "px" });
 
