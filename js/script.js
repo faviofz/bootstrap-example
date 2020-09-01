@@ -1,14 +1,17 @@
-$(document).ready(function() {
-    $(".bxslider").bxSlider({
-        mode: "fade",
-        speed: 3000,
-        // hideControlOnEnd: true,
-        touchEnabled: false,
-        controls: false,
-        auto: true,
-        pager: false,
-        wrapperClass: "f-wrapper"
-    });
+$(document).ready(function () {
+	var alturaBanner = $("header").height();
+	$(".bx-viewport").css({ height: alturaBanner + "px" });
+
+	$(".bxslider").bxSlider({
+		mode: "fade",
+		speed: 3000,
+		// hideControlOnEnd: true,
+		touchEnabled: false,
+		controls: false,
+		auto: true,
+		pager: false,
+		wrapperClass: "f-wrapper"
+	});
 });
 // var alturaBanner = $(".slick-list").height();
 // $(".bannerEstatico").css({ height: alturaBanner + "px" });
