@@ -1,18 +1,22 @@
 $(document).ready(function () {
-	var alturaBanner = $("header").height();
-	$(".bx-viewport").css({ height: alturaBanner + "px" });
-
-	$(".bxslider").bxSlider({
-		mode: "fade",
-		speed: 3000,
-		// hideControlOnEnd: true,
-		touchEnabled: false,
+	var slider = tns({
+		container: ".my-slider",
+		items: 1,
+		mode: "gallery",
 		controls: false,
-		auto: true,
-		pager: false,
-		wrapperClass: "f-wrapper"
+		nav: false,
+		speed: 500,
+		autoplay: true,
+		autoplayButtonOutput: false,
+		touch: false
 	});
+
+	var alturaBanner = $(".my-slider div.img").height();
+	console.log(alturaBanner);
+	$(".bannerEstatico").css({ height: alturaBanner + "px" });
 });
+// var alturaBanner = $("div.bx-viewport").style.height;
+// console.log(alturaBanner);
 // var alturaBanner = $(".slick-list").height();
 // $(".bannerEstatico").css({ height: alturaBanner + "px" });
 
