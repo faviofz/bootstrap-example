@@ -59,4 +59,23 @@ $(document).ready(function () {
 		next: `<i class="fas fa-angle-right"></i>`,
 		hideOnlyOnePage: true
 	});
+
+	/* --------------------------- ANCHOR SCROLLMAGIC --------------------------- */
+
+	var controller = new ScrollMagic.Controller();
+
+	var scene = new ScrollMagic.Scene({
+		triggerElement: ".containerInicio" // starting scene, when reaching this element
+	}).setClassToggle(".containerInicio", "show"); // the element we want to pin
+
+	// Add Scene to ScrollMagic Controller
+	controller.addScene(scene);
+
+	/* ----------------------------- ANCHOR SCROLLUP ---------------------------- */
+
+	$.scrollUp({
+		scrollText: "",
+		scrollSpeed: 2000,
+		easingType: "easeOutQuint"
+	});
 });
