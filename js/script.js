@@ -19,10 +19,12 @@ $(document).ready(function () {
 		var posY = window.pageYOffset;
 
 		if (posY > alturaBanner) {
+			$(".my-slider").css("display", "none");
 			$("header").css("background-color", "white");
 			$("header .logotipo").css("filter", "invert(100%)");
 			$(".fa-search, .fa-bars").css("color", "black");
 		} else {
+			$(".my-slider").css("display", "block");
 			$("header").css("background-color", "rgba(0,0,0,0.5)");
 			$("header .logotipo").css("filter", "invert(0%)");
 			$(".fa-search, .fa-bars").css("color", "white");

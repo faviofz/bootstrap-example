@@ -222,6 +222,11 @@ div i.fa-bars {
 	header .logotipo {
 		width: 50%;
 	}
+
+	.comentarios p {
+		line-height: 1.1;
+		margin: 0;
+	}
 }
 
 /* -------------------------------------------------------------------------- */
@@ -386,6 +391,12 @@ div i.fa-bars {
 	.grid figure p {
 		font-size: 12px;
 		font-weight: 400;
+	}
+
+	.fecha {
+		font-size: 12px;
+		height: 15px;
+		line-height: 0;
 	}
 }
 
