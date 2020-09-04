@@ -195,20 +195,22 @@ div i.fa-bars {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                           ANCHOR CONTENIDO BLOGO                           */
+/*                           ANCHOR PAGINADOR		                          */
 /* -------------------------------------------------------------------------- */
 
-.introArticulo {
-	position: relative;
+.page-item.active .page-link {
+	background: #ff00dd;
+	color: white;
+	border: 1px solid #bbb;
 }
 
-/* .fecha {
-	position: absolute;
-	right: 15px;
-	top: 0px;
-	color: grey;
-	font-size: 14px;
-} */
+.page-link {
+	color: #bbb;
+}
+
+.page-link:hover {
+	color: #ff00dd;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                   !SECTION                                 */
@@ -271,6 +273,11 @@ div i.fa-bars {
 
 	.grid .photo5 {
 		height: 300px;
+	}
+
+	.comentarios p {
+		line-height: 1.1;
+		margin: 0;
 	}
 }
 

@@ -47,4 +47,16 @@ $(document).ready(function () {
 	$(".grid figure").mouseout(function () {
 		$(this).css({ "background-position": "left top" });
 	});
+
+	/* ---------------------------- ANCHOR PAGINACION --------------------------- */
+
+	$(".pagination").twbsPagination({
+		totalPages: 10,
+		visiblePages: 4,
+		first: "",
+		last: "",
+		prev: `<i class="fas fa-angle-left "></i>`,
+		next: `<i class="fas fa-angle-right"></i>`,
+		hideOnlyOnePage: true
+	});
 });

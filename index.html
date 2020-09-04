@@ -9,7 +9,6 @@
 			rel="stylesheet"
 		/>
 		<!-- CSS only -->
-		<link rel="stylesheet" href="css/styles.css" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -20,6 +19,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
 		/>
+		<link rel="stylesheet" href="css/styles.css" />
 		<!-- JS, Popper.js, and jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script
@@ -39,7 +39,9 @@
 			src="https://kit.fontawesome.com/44a31bd5ca.js"
 			crossorigin="anonymous"
 		></script>
-		<title>Document</title>
+		<!-- Pagination -->
+		<script src="js/jquery.twbsPagination.min.js"></script>
+		<title>Blog Personal</title>
 	</head>
 
 	<body>
@@ -242,12 +244,12 @@
 			<div class="container">
 				<div class="row">
 					<!-- Columna izquierda -->
-					<div class="col-12 col-lg-9 p-0 pr-lg-5">
+					<div class="col-12 col-md-8 col-lg-9 p-0 pr-lg-5">
 						<!-- ARTICULO 01 -->
 						<div class="row">
 							<div class="col-12 col-lg-5">
 								<span class="d-flex d-lg-none justify-content-between py-2">
-									<h5 class="mb-0">Type something here</h5>
+									<h5 class="mb-0 mt-1">Type something here</h5>
 									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
 								</span>
 								<img src="img/Art01.jpg" alt="" class="img-fluid" />
@@ -270,7 +272,7 @@
 						<div class="row">
 							<div class="col-12 col-lg-5">
 								<span class="d-flex d-lg-none justify-content-between py-2">
-									<h5 class="mb-0">Type something here</h5>
+									<h5 class="mb-0 mt-1">Type something here</h5>
 									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
 								</span>
 								<img src="img/Art02.jpg" alt="" class="img-fluid" />
@@ -302,7 +304,7 @@
 						<div class="row">
 							<div class="col-12 col-lg-5">
 								<span class="d-flex d-lg-none justify-content-between py-2">
-									<h5 class="mb-0">Type something here</h5>
+									<h5 class="mb-0 mt-1">Type something here</h5>
 									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
 								</span>
 								<img src="img/Art03.jpg" alt="" class="img-fluid" />
@@ -325,7 +327,7 @@
 						<div class="row">
 							<div class="col-12 col-lg-5">
 								<span class="d-flex d-lg-none justify-content-between py-2">
-									<h5 class="mb-0">Type something here</h5>
+									<h5 class="mb-0 mt-1">Type something here</h5>
 									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
 								</span>
 								<img src="img/Art04.jpg" alt="" class="img-fluid" />
@@ -348,7 +350,7 @@
 						<div class="row">
 							<div class="col-12 col-lg-5">
 								<span class="d-flex d-lg-none justify-content-between py-2">
-									<h5 class="mb-0">Type something here</h5>
+									<h5 class="mb-0 mt-1">Type something here</h5>
 									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
 								</span>
 								<img src="img/Art05.jpg" alt="" class="img-fluid" />
@@ -367,12 +369,16 @@
 							</div>
 						</div>
 						<hr class="my-2 my-md-4" style="border: 1px solid #79ff39" />
+						<!-- PAGINACION -->
+						<div class="container d-none d-md-block">
+							<ul class="pagination justify-content-center"></ul>
+						</div>
 					</div>
 					<!-- Columna derecha -->
-					<div class="d-none d-lg-block col-lg-3">
+					<div class="d-none d-md-block col-md-4 col-lg-3">
 						<!-- SOBRE MI -->
 						<div class="sobre-mi">
-							<h4>Sobre mi</h4>
+							<h4 class="pt-md-1 pt-lg-0">Sobre mi</h4>
 							<img
 								src="img/sobremi.svg"
 								alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, a!"
