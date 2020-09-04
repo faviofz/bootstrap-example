@@ -9,12 +9,15 @@
 			rel="stylesheet"
 		/>
 		<!-- CSS only -->
-		<link rel="stylesheet" href="css/styles.css" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
 			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
 		/>
 		<link rel="stylesheet" href="css/styles.css" />
 		<!-- JS, Popper.js, and jQuery -->
@@ -29,24 +32,23 @@
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
 		<!-- Font Awesome -->
 		<script
 			src="https://kit.fontawesome.com/44a31bd5ca.js"
 			crossorigin="anonymous"
 		></script>
-		<!-- slick slider-->
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-		/>
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-		/>
-		<title>Document</title>
+		<!-- Pagination -->
+		<script src="js/jquery.twbsPagination.min.js"></script>
+		<!-- ScrollMagic -->
+		<script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
+		<!-- ScrollUp -->
+		<script src="js/jquery.scrollUp.min.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<title>Blog Personal</title>
 	</head>
+
 	<body>
 		<!-- ----------------------------------------------------------------------- -->
 		<!--                                CABECERA                                 -->
@@ -55,7 +57,10 @@
 		<header class="container-fluid">
 			<div class="container p-0">
 				<div class="row">
-					<!-- LOGO -->
+					<!-- ----------------------------------------------------------------------- -->
+					<!--                                  LOGO                                   -->
+					<!-- ----------------------------------------------------------------------- -->
+
 					<div class="col-10 col-sm-11 col-md-8 col-lg-7 pt-xl-1">
 						<a href="index.html">
 							<img src="img/logotipo.png" alt="Logotipo" class="img-fluid logotipo" />
@@ -69,29 +74,29 @@
 					<div class="d-none d-md-block col-md-2 col-lg-3 redes">
 						<ul class="d-flex justify-content-end pt-2 mt-2">
 							<li>
-								<a href="www.facebook.com" target="_blank">
+								<a href="https://www.facebook.com" target="_blank">
 									<i class="fab fa-facebook-f lead mr-1 rounded-circle text-white"></i>
 								</a>
 							</li>
 							<li>
-								<a href="www.instagram.com" target="_blank">
+								<a href="https://www.instagram.com" target="_blank">
 									<i class="fab fa-instagram lead mr-1 rounded-circle text-white"></i>
 								</a>
 							</li>
 							<li>
-								<a href="www.twitter.com" target="_blank">
+								<a href="https://www.twitter.com" target="_blank">
 									<i class="fab fa-twitter lead mr-1 rounded-circle text-white"></i>
 								</a>
 							</li>
 							<li>
-								<a href="www.snapchat.com" target="_blank">
+								<a href="https://www.snapchat.com" target="_blank">
 									<i
 										class="fab fa-snapchat-ghost lead mr-1 rounded-circle text-white"
 									></i>
 								</a>
 							</li>
 							<li>
-								<a href="www.youtube.com" target="_blank">
+								<a href="https://www.youtube.com" target="_blank">
 									<i class="fab fa-youtube lead mr-1 rounded-circle text-white"></i>
 								</a>
 							</li>
@@ -103,15 +108,49 @@
 					<!-- ----------------------------------------------------------------------- -->
 
 					<div
-						class="col-2 col-sm-1 col-md-2 col-lg-2 d-flex justify-content-end pt-2 mt-sm-1"
+						class="col-2 col-sm-1 col-md-2 col-lg-2 d-flex justify-content-end pt-1 mt-sm-1"
 					>
-						<!-- BUSCADOR -->
-						<div class="d-none d-md-block pr-4 pr-lg-4 mt-1">
-							<i class="fas fa-search lead"></i>
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                                BUSCADOR                                 -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="d-none d-md-block pr-4 pr-lg-4 mt-3">
+							<i
+								class="fas fa-search lead"
+								data-toggle="collapse"
+								data-target="#buscador"
+							></i>
 						</div>
-						<!-- BOTON MENU -->
-						<div class="mt-sm-2 mt-md-0 pr-sm-2 pr-lg-3">
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               BOTON MENU                                -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="mt-1 mt-sm-2 pr-sm-2 pr-lg-3">
 							<i class="fas fa-bars lead"></i>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-8"></div>
+
+					<!-- ----------------------------------------------------------------------- -->
+					<!--                          ENTRADA DEL BUSCADOR                           -->
+					<!-- ----------------------------------------------------------------------- -->
+
+					<div id="buscador" class="collapse col-md-6 col-lg-4 pb-3">
+						<div class="input-group float-right">
+							<input
+								type="text"
+								name=""
+								id=" "
+								class="form-control"
+								placeholder="Buscar"
+							/>
+							<div class="input-group-append">
+								<span class="input-group-text">
+									<i class="fas fa-search"></i>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -123,32 +162,30 @@
 		<!-- ----------------------------------------------------------------------- -->
 
 		<div class="d-block d-md-none redes redesMovil p-0 pt-2 w-100">
-			<ul class="d-flex justify-content-center p-0">
+			<ul class="d-flex justify-content-around p-0">
 				<li>
 					<a href="www.facebook.com" target="_blank">
-						<i class="fab fa-facebook-f lead mx-2 mx-sm-4 rounded-circle text-white"></i>
+						<i class="fab fa-facebook-f lead rounded-circle text-white"></i>
 					</a>
 				</li>
 				<li>
 					<a href="www.instagram.com" target="_blank">
-						<i class="fab fa-instagram lead mx-2 mx-sm-4 rounded-circle text-white"></i>
+						<i class="fab fa-instagram lead rounded-circle text-white"></i>
 					</a>
 				</li>
 				<li>
 					<a href="www.twitter.com" target="_blank">
-						<i class="fab fa-twitter lead mx-2 mx-sm-4 rounded-circle text-white"></i>
+						<i class="fab fa-twitter lead rounded-circle text-white"></i>
 					</a>
 				</li>
 				<li>
 					<a href="www.snapchat.com" target="_blank">
-						<i
-							class="fab fa-snapchat-ghost lead mx-2 mx-sm-4 rounded-circle text-white"
-						></i>
+						<i class="fab fa-snapchat-ghost lead rounded-circle text-white"></i>
 					</a>
 				</li>
 				<li>
 					<a href="www.youtube.com" target="_blank">
-						<i class="fab fa-youtube lead mx-2 mx-sm-4 rounded-circle text-white"></i>
+						<i class="fab fa-youtube lead rounded-circle text-white"></i>
 					</a>
 				</li>
 			</ul>
@@ -159,26 +196,12 @@
 		<!-- ----------------------------------------------------------------------- -->
 
 		<div class="bannerEstatico"></div>
-		<div class="sliderf">
-			<div>
-				<img
-					src="img/pexels-eberhard-grossgasteiger-443446 (1).jpg"
-					class="img-fluid"
-					alt=""
-				/>
-			</div>
-			<div>
-				<img src="img/pexels-fabian-wiktor-994605 (2).jpg" class="img-fluid" alt="" />
-			</div>
-			<div>
-				<img src="img/pexels-pixabay-163872.jpg" class="img-fluid" alt="" />
-			</div>
-			<div>
-				<img src="img/pexels-splitshire-1562.jpg" class="img-fluid" alt="" />
-			</div>
-			<div>
-				<img src="img/pexels-stephan-seeber-1054289.jpg" class="img-fluid" alt="" />
-			</div>
+		<div class="my-slider">
+			<div><img src="img/img01.jpg" alt="" class="img-fluid" /></div>
+			<div><img src="img/img02.jpg" alt="" class="img-fluid" /></div>
+			<div><img src="img/img03.jpg" alt="" class="img-fluid" /></div>
+			<div><img src="img/img04.jpg" alt="" class="img-fluid" /></div>
+			<div><img src="img/img05.jpg" alt="" class="img-fluid" /></div>
 		</div>
 
 		<!-- ----------------------------------------------------------------------- -->
@@ -187,7 +210,7 @@
 
 		<div class="container d-block d-md-none py-3">
 			<div class="input-group input-group-sm">
-				<input type="text" class="form-control" placeholder="Buscar" />
+				<input type="text " class="form-control" placeholder="Buscar " />
 				<div class="input-group-append">
 					<span class="input-group-text">
 						<i class="fas fa-search lead text-white"></i>
@@ -204,120 +227,414 @@
 			<a href="#" class="btnClose">X</a>
 			<ul class="nav flex-column text-center">
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Pagina 1</a>
+					<a class="nav-link text-white" href="# ">Pagina 1</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Pagina 2</a>
+					<a class="nav-link text-white" href="# ">Pagina 2</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Pagina 3</a>
+					<a class="nav-link text-white" href="# ">Pagina 3</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Pagina 4</a>
+					<a class="nav-link text-white" href="# ">Pagina 4</a>
 				</li>
 			</ul>
 		</div>
 
-		<h1>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos alias, atque
-			iusto praesentium velit animi voluptatem ex, ullam quam sequi consectetur, eveniet
-			optio nesciunt adipisci labore facere odio enim nulla explicabo mollitia. Eveniet,
-			illum! Quia provident blanditiis itaque nostrum fugiat libero, perferendis illum
-			ratione neque, fuga accusantium officiis natus reprehenderit omnis iure doloremque
-			quisquam unde pariatur error earum. Excepturi dignissimos fugiat mollitia error
-			dolores deserunt recusandae sint rerum harum consequatur, consectetur non, quisquam
-			aut tempore delectus ut! Voluptatibus quia quasi aliquam doloremque tempore, odio
-			quibusdam adipisci mollitia aut dignissimos maiores porro, minima perferendis dicta
-			nesciunt, natus nostrum consequatur quos nisi at repudiandae autem totam facilis.
-			Iure laudantium possimus voluptas atque recusandae necessitatibus quisquam quibusdam
-			beatae nemo alias excepturi, quaerat dolore quo commodi modi animi dignissimos quis
-			eaque veniam qui esse! Veniam, natus quas perspiciatis repellat optio magnam beatae
-			qui, et impedit officia quo consequatur consectetur voluptas quis, alias suscipit.
-			Ut accusamus similique quasi nam voluptas totam ex, commodi tenetur dolor libero
-			illo? Corrupti accusantium consectetur cumque esse placeat doloribus sed et ducimus.
-			Fugiat animi quos quae earum magni explicabo atque numquam tempora doloremque culpa
-			obcaecati commodi est labore sequi facere, possimus doloribus fuga. Suscipit
-			consequuntur minima voluptatum rem repudiandae alias temporibus, optio earum
-			dignissimos veniam praesentium natus, excepturi illum porro eius! Odio accusamus
-			quibusdam eum ea, rem nisi atque commodi? Praesentium deserunt doloribus autem et
-			vel ex consectetur inventore ad porro accusamus, esse laborum! Necessitatibus error
-			perferendis, inventore rem consequuntur autem eum eos reprehenderit, quas laudantium
-			aut? Dolorum nesciunt, odio facere aperiam delectus, harum quae dolor numquam
-			inventore consequuntur aliquid. Eligendi fugit sint ex sunt, rem eaque assumenda
-			adipisci magnam modi, nulla, in doloribus aperiam? Iure dolore sapiente beatae,
-			impedit nesciunt libero quia accusamus repellat praesentium fugiat ab omnis aut
-			saepe ratione quod cumque officiis nisi! Consequatur nihil sapiente earum voluptatum
-			quaerat perferendis, repellat tenetur, dolores magni vel repudiandae consectetur.
-			Reprehenderit voluptate possimus cum ad porro? Consequuntur itaque doloribus dolore
-			porro molestiae? Eveniet impedit perspiciatis, distinctio earum, et corporis
-			deleniti cumque ex, minima consequatur quasi repellendus voluptates voluptas. Dolor
-			commodi amet nihil cupiditate nam, deserunt alias deleniti quod neque minima impedit
-			iusto pariatur unde facere veritatis perferendis hic harum accusantium numquam.
-			Suscipit molestiae, illo non id doloremque accusantium tempore quos iure ut qui
-			perspiciatis obcaecati saepe cupiditate neque modi quam blanditiis voluptatum
-			voluptates alias praesentium? Illum at commodi similique, itaque non facilis
-			distinctio pariatur repudiandae a asperiores nostrum ut vitae quibusdam voluptate
-			ducimus et aspernatur molestiae? Esse provident perspiciatis debitis ex enim dolorem
-			quis, nam, odio, nisi fugit sit sunt unde natus molestiae. Assumenda ab velit rerum
-			minima nesciunt ea cum eligendi dignissimos sed iusto, non repellat aliquam commodi
-			ducimus deleniti quasi recusandae culpa! Adipisci natus explicabo enim rem,
-			veritatis cumque aliquam dolores aut et illo deserunt debitis aspernatur hic, facere
-			voluptates? Distinctio facere reprehenderit eos similique, totam minus maiores
-			ducimus officiis, accusantium rerum facilis. Cum amet veritatis fugiat voluptas.
-			Debitis commodi repudiandae aliquam, facere iusto natus sunt optio error laborum
-			provident quas facilis fugiat reiciendis magni eligendi placeat, dignissimos soluta?
-			Et officia eos voluptatibus. Adipisci dicta tempora quam vel omnis voluptas alias
-			tenetur qui consequuntur, velit, ipsa nesciunt explicabo dignissimos aliquid sint
-			odit impedit et, veritatis voluptatem culpa asperiores sequi ut labore tempore.
-			Dolorem nihil totam eligendi voluptatem earum saepe perferendis, dolore magnam vero
-			id maiores repellendus eaque possimus impedit. Maxime enim suscipit, esse repellat
-			omnis libero a soluta iure quia cupiditate amet animi explicabo numquam dolore culpa
-			magnam. Minima reprehenderit, veniam voluptates iste fugiat perspiciatis ipsum sunt
-			incidunt deserunt nobis explicabo. Libero, facere rem sit eum odit rerum quis alias,
-			esse sapiente fugiat doloribus impedit dicta assumenda perferendis. Atque illum
-			officiis in mollitia! Esse deleniti sapiente doloribus, quos officiis totam vero
-			explicabo necessitatibus tempore impedit soluta cumque officia quia velit dicta
-			minima atque excepturi nulla non autem. Voluptatum id debitis tenetur maxime
-			corrupti vitae dicta, voluptatibus, at eum necessitatibus aperiam explicabo alias
-			inventore cum facilis! Necessitatibus, at! Voluptate architecto atque dicta, tempora
-			aliquam blanditiis recusandae quibusdam saepe quaerat autem amet iste repellendus
-			sed, quos enim modi labore laborum numquam assumenda? Dicta suscipit magnam facere
-			nesciunt voluptate provident ut veniam, voluptatum error, quidem explicabo vel ex
-			laudantium esse ipsam et beatae velit quos at temporibus. Aspernatur cumque eveniet
-			adipisci, fugit sed mollitia corporis soluta laboriosam accusamus saepe tenetur
-			delectus assumenda consequatur doloribus necessitatibus esse asperiores nulla
-			consectetur molestiae fuga. Harum necessitatibus delectus reiciendis facere natus
-			quas. At architecto nostrum eius officia quibusdam rerum iste, quidem doloribus
-			soluta sunt, sapiente vel cumque libero veniam ullam minima tempore consequuntur
-			voluptatibus dolor exercitationem reiciendis dolorum. Sunt, necessitatibus ipsa quo
-			fugiat aperiam voluptates enim corporis vitae obcaecati odio error adipisci corrupti
-			at aspernatur. Velit repudiandae nobis perspiciatis quam eum quasi numquam impedit
-			eveniet nemo veritatis veniam omnis voluptas officiis inventore ducimus illum nisi
-			possimus necessitatibus iste autem nam, quos, cupiditate minima. Debitis natus
-			consequuntur laborum ad aperiam praesentium soluta. Porro quos repudiandae impedit
-			ad voluptates sed? Quae est consequatur quisquam necessitatibus, voluptatum quasi
-			voluptate et aut esse nesciunt nam aperiam reprehenderit assumenda! Earum, quae!
-			Delectus illo esse at unde, quae maiores dignissimos mollitia vel recusandae minima
-			aspernatur soluta, natus id cum, vero nemo. In, repellendus illo sit molestias
-			laborum ullam est amet neque nostrum laboriosam ut rem exercitationem ipsam. Unde
-			saepe neque fugit iusto inventore soluta vero. Dolores ea consectetur, voluptatem
-			ducimus soluta repellendus eos magnam omnis autem culpa. Voluptate, eveniet eum!
-			Quod ipsum dolor tenetur similique ex eius molestiae, eveniet voluptatum repellat
-			eum quia aut vero itaque, tempore voluptatibus, id sed? Suscipit qui tempore tempora
-			debitis totam. Sint quae eveniet voluptate quaerat maxime ipsum, vero nobis
-			molestias cumque quia totam. Reprehenderit, qui. Rem laboriosam eveniet architecto
-			et. Consectetur quae explicabo dolore reprehenderit culpa iste sint officia
-			repudiandae laudantium commodi vitae alias deleniti, dicta, mollitia aut eaque
-			tempore a quis ex neque! Dolorem, minus. Odit cum fugiat eveniet. Quos iure
-			doloremque, tempora quaerat reprehenderit repudiandae quas dolorum, accusantium
-			blanditiis voluptate fugit laborum adipisci? At, autem voluptatem dolores eum
-			debitis delectus totam recusandae cumque illum? Culpa commodi amet rem in suscipit,
-			cupiditate error quaerat?
-		</h1>
-		<script
-			type="text/javascript"
-			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-		></script>
-		<script src="js/script.js"></script>
+		<!-- ----------------------------------------------------------------------- -->
+		<!--                             GRID CATEGORIA                             -->
+		<!-- ----------------------------------------------------------------------- -->
+
+		<div class="container-fluid py-2 py-md-5 grid bg-white">
+			<div class="container p-0">
+				<div class="d-flex">
+					<div class="d-flex flex-column p-0 p-md-1 columna1">
+						<figure class="p-2 photo1">
+							<p class="text-uppercase p-1 p-md-2 p-xl-4">Mi viaje por Africa</p>
+						</figure>
+						<figure class="p-2 photo2">
+							<p class="text-uppercase p-1 p-md-2 p-xl-4">Mi viaje por Centroamerica</p>
+						</figure>
+						<figure class="d-block d-md-none p-2 photo6">
+							<p class="text-uppercase p-1 p-md-2 p-xl-4">Mi viaje por Asia</p>
+						</figure>
+					</div>
+					<div class="d-flex flex-column p-0 p-md-1 flex-fill columna2">
+						<div class="d-block d-md-flex">
+							<figure class="p-2 flex-fill photo3">
+								<p class="text-uppercase p-1 p-md-2 p-xl-4">Mi viaje por Norteamerica</p>
+							</figure>
+							<figure class="p-2 flex-fill photo4">
+								<p class="text-uppercase p-1 p-md-2 p-xl-4">Mi viaje por Sudamerica</p>
+							</figure>
+						</div>
+						<figure class="p-2 photo5">
+							<p class="text-uppercase p-1 p-md-2 p-xl-4">Mi viaje por Europa</p>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ----------------------------------------------------------------------- -->
+		<!--                             CONTENIDO BLOG                              -->
+		<!-- ----------------------------------------------------------------------- -->
+
+		<div class="container-fluid bg-white containerInicio mb-5">
+			<div class="container">
+				<div class="row">
+					<!-- ----------------------------------------------------------------------- -->
+					<!--                            Columna izquierda                            -->
+					<!-- ----------------------------------------------------------------------- -->
+
+					<div class="col-12 col-md-8 col-lg-9 p-0 pr-lg-5">
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               ARTICULO 01                               -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="row">
+							<div class="col-12 col-lg-5">
+								<span class="d-flex d-lg-none justify-content-between py-2">
+									<h5 class="mb-0 mt-1">Type something here</h5>
+									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
+								</span>
+								<img src="img/Art01.jpg" alt="" class="img-fluid" />
+							</div>
+
+							<div class="col-12 col-lg-7 introArticulo">
+								<span class="d-none d-lg-flex justify-content-between">
+									<h4>Type something here</h4>
+									<i class="fas fa-calendar-day float-right my-1"> 30.90.2018</i>
+								</span>
+								<p class="my-2 my-lg-4 w-100">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque et
+									ad nostrum dicta beatae minima sed? Harum, dicta totam...
+								</p>
+								<a href="#" class="float-right">Seguir leyendo</a>
+							</div>
+						</div>
+						<hr class="my-2 my-md-4" style="border: 1px solid #79ff39" />
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               ARTICULO 02                               -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="row">
+							<div class="col-12 col-lg-5">
+								<span class="d-flex d-lg-none justify-content-between py-2">
+									<h5 class="mb-0 mt-1">Type something here</h5>
+									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
+								</span>
+								<img src="img/Art02.jpg" alt="" class="img-fluid" />
+							</div>
+
+							<div class="col-12 col-lg-7 introArticulo">
+								<span class="d-none d-lg-flex justify-content-between">
+									<h4>Type something here</h4>
+									<i class="fas fa-calendar-day float-right my-1"> 30.90.2018</i>
+								</span>
+								<p class="my-2 my-lg-4 w-100">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque et
+									ad nostrum dicta beatae minima sed? Harum, dicta totam...
+								</p>
+								<a href="#" class="float-right">Seguir leyendo</a>
+							</div>
+						</div>
+						<hr class="my-2 my-md-4" style="border: 1px solid #79ff39" />
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               PUBLICIDAD                                -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="d-block d-lg-none">
+							<img
+								src="img/add01.png"
+								alt="Publicidad Coca-Cola"
+								class="img-fluid w-100"
+							/>
+							<hr class="my-2 my-md-4" style="border: 1px solid #79ff39" />
+						</div>
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               ARTICULO 03                               -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="row">
+							<div class="col-12 col-lg-5">
+								<span class="d-flex d-lg-none justify-content-between py-2">
+									<h5 class="mb-0 mt-1">Type something here</h5>
+									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
+								</span>
+								<img src="img/Art03.jpg" alt="" class="img-fluid" />
+							</div>
+
+							<div class="col-12 col-lg-7 introArticulo">
+								<span class="d-none d-lg-flex justify-content-between">
+									<h4>Type something here</h4>
+									<i class="fas fa-calendar-day float-right my-1"> 30.90.2018</i>
+								</span>
+								<p class="my-2 my-lg-4 w-100">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque et
+									ad nostrum dicta beatae minima sed? Harum, dicta totam...
+								</p>
+								<a href="#" class="float-right">Seguir leyendo</a>
+							</div>
+						</div>
+						<hr class="my-2 my-md-4" style="border: 1px solid #79ff39" />
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               ARTICULO 04                               -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="row">
+							<div class="col-12 col-lg-5">
+								<span class="d-flex d-lg-none justify-content-between py-2">
+									<h5 class="mb-0 mt-1">Type something here</h5>
+									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
+								</span>
+								<img src="img/Art04.jpg" alt="" class="img-fluid" />
+							</div>
+
+							<div class="col-12 col-lg-7 introArticulo">
+								<span class="d-none d-lg-flex justify-content-between">
+									<h4>Type something here</h4>
+									<i class="fas fa-calendar-day float-right my-1"> 30.90.2018</i>
+								</span>
+								<p class="my-2 my-lg-4 w-100">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque et
+									ad nostrum dicta beatae minima sed? Harum, dicta totam...
+								</p>
+								<a href="#" class="float-right">Seguir leyendo</a>
+							</div>
+						</div>
+						<hr class="my-2 my-md-4" style="border: 1px solid #79ff39" />
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               ARTICULO 05                               -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="row">
+							<div class="col-12 col-lg-5">
+								<span class="d-flex d-lg-none justify-content-between py-2">
+									<h5 class="mb-0 mt-1">Type something here</h5>
+									<i class="fas fa-calendar-day my-2 my-sm-1 p-sm-1 fecha"> 30.90.2018</i>
+								</span>
+								<img src="img/Art05.jpg" alt="" class="img-fluid" />
+							</div>
+
+							<div class="col-12 col-lg-7 introArticulo">
+								<span class="d-none d-lg-flex justify-content-between">
+									<h4>Type something here</h4>
+									<i class="fas fa-calendar-day float-right my-1"> 30.90.2018</i>
+								</span>
+								<p class="my-2 my-lg-4 w-100">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque et
+									ad nostrum dicta beatae minima sed? Harum, dicta totam...
+								</p>
+								<a href="#" class="float-right">Seguir leyendo</a>
+							</div>
+						</div>
+						<hr class="my-2 my-md-4" style="border: 1px solid #79ff39" />
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               PAGINACION                                -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="container d-none d-md-block">
+							<ul class="pagination justify-content-center"></ul>
+						</div>
+					</div>
+
+					<!-- ----------------------------------------------------------------------- -->
+					<!--                             Columna derecha                             -->
+					<!-- ----------------------------------------------------------------------- -->
+
+					<div class="d-none d-md-block col-md-4 col-lg-3">
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                                SOBRE MI                                 -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="sobre-mi">
+							<h4 class="pt-md-1 pt-lg-0">Sobre mi</h4>
+							<img
+								src="img/sobremi.svg"
+								alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, a!"
+								class="img-fluid my-1"
+							/>
+							<p class="small">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore omnis
+								error quis enim repellat fugiat nemo veniam natus eveniet non.
+							</p>
+						</div>
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                               PUBLICIDAD                                -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="d-lg-block d-none">
+							<img
+								src="img/add01.png"
+								alt="Publicidad Coca-Cola"
+								class="img-fluid w-100"
+							/>
+						</div>
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                          COMENTARIOS RECIENTES                          -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="my-4 comentarios">
+							<h4>Comentarios Recientes</h4>
+							<div class="d-flex my-2 py-1 py-lg-2">
+								<div class="w-100 pr-xl-3 pr-2">
+									<img src="img/Com01.webp" alt="" class="img-fluid" />
+								</div>
+								<div class="">
+									<p class="small">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo.
+									</p>
+								</div>
+							</div>
+							<div class="d-flex my-2 py-1 py-lg-2">
+								<div class="w-100 pr-xl-3 pr-2">
+									<img src="img/Com02.jpg" alt="" class="img-fluid" />
+								</div>
+								<div>
+									<p class="small">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo.
+									</p>
+								</div>
+							</div>
+							<div class="d-flex my-2 py-1 py-lg-2">
+								<div class="w-100 pr-xl-3 pr-2">
+									<img src="img/Com03.webp" alt="" class="img-fluid" />
+								</div>
+								<div>
+									<p class="small">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo.
+									</p>
+								</div>
+							</div>
+							<div class="d-flex my-2 py-1 py-lg-2">
+								<div class="w-100 pr-xl-3 pr-2">
+									<img src="img/Com04.jpg" alt="" class="img-fluid" />
+								</div>
+								<div>
+									<p class="small">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo.
+									</p>
+								</div>
+							</div>
+							<div class="d-lg-block d-none">
+								<img
+									src="img/add01.png"
+									alt="Publicidad Coca-Cola"
+									class="img-fluid w-100"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ----------------------------------------------------------------------- -->
+		<!--                                 FOOTER                                  -->
+		<!-- ----------------------------------------------------------------------- -->
+		<footer class="container-fluid p-5 d-none d-md-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-7">
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                            CATEGORIAS FOOTER                            -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="p-0 gridFooter bg-white">
+							<div class="container p-0">
+								<div class="d-flex">
+									<div class="d-flex flex-column p-0 columna1">
+										<figure class="p-0 m-0 photo1">
+											<p class="text-uppercase p-1 p-md-1 p-xl-1">Africa</p>
+										</figure>
+										<figure class="p-0 m-0 photo2">
+											<p class="text-uppercase p-1 p-md-1 p-xl-1">Centroamerica</p>
+										</figure>
+									</div>
+									<div class="d-flex flex-column p-0 flex-fill columna2">
+										<div class="d-block d-md-flex">
+											<figure class="p-0 m-0 flex-fill photo3">
+												<p class="text-uppercase p-1 p-md-1 p-xl-1">Norteamerica</p>
+											</figure>
+											<figure class="p-0 m-0 flex-fill photo4">
+												<p class="text-uppercase p-1 p-md-1 p-xl-1">Sudamerica</p>
+											</figure>
+										</div>
+										<figure class="p-0 m-0 photo5">
+											<p class="text-uppercase p-1 p-md-1 p-xl-1">Europa</p>
+										</figure>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-none d-lg-block col-lg-1 col-xl-2"></div>
+
+					<!-- ----------------------------------------------------------------------- -->
+					<!--                               NEWSLETTER                                -->
+					<!-- ----------------------------------------------------------------------- -->
+
+					<div class="col-lg-5 col-xl-4 col-md-5 align-self-center">
+						<h6 class="text-white">Inscríbete en nuestro newsletter:</h6>
+						<div class="input-group pt-4">
+							<input
+								type="text"
+								class="form-control"
+								name=""
+								id=""
+								placeholder="Ingresa tu Email"
+							/>
+							<div class="input-group-append">
+								<span class="input-group-text bg-dark text-white">Inscribirme</span>
+							</div>
+						</div>
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                             REDES SOCIALES                              -->
+						<!-- ----------------------------------------------------------------------- -->
+
+						<div class="p-0 pt-4 w-100">
+							<ul class="d-flex justify-content-left p-0">
+								<li>
+									<a href="www.facebook.com" target="_blank">
+										<i class="fab fa-facebook-f lead mx-2 text-white"></i>
+									</a>
+								</li>
+								<li>
+									<a href="www.instagram.com" target="_blank">
+										<i class="fab fa-instagram lead mx-2 text-white"></i>
+									</a>
+								</li>
+								<li>
+									<a href="www.twitter.com" target="_blank">
+										<i class="fab fa-twitter lead mx-2 text-white"></i>
+									</a>
+								</li>
+								<li>
+									<a href="www.snapchat.com" target="_blank">
+										<i class="fab fa-snapchat-ghost lead mx-2 text-white"></i>
+									</a>
+								</li>
+								<li>
+									<a href="www.youtube.com" target="_blank">
+										<i class="fab fa-youtube lead mx-2 text-white"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/script.js "></script>
 	</body>
 </html>
