@@ -1,18 +1,11 @@
 $(document).ready(function () {
-	var slider = tns({
-		container: ".my-slider",
-		items: 1,
-		mode: "gallery",
-		controls: false,
-		nav: false,
-		speed: 500,
-		autoplay: true,
-		autoplayButtonOutput: false,
-		touch: false,
-		autoHeight: true
+	var slide = $("#my-carousel").carousel({
+		interval: 2000,
+		pause: false
 	});
+	slide.carousel("cycle");
 
-	var alturaBanner = $(".my-slider").height();
+	var alturaBanner = $("#my-carousel").height();
 	$(".bannerEstatico").css({ height: alturaBanner + "px" });
 
 	$(window).scroll(function () {
